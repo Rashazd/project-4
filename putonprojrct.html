@@ -1,0 +1,22 @@
+<div class="cards-grid"></div>
+<script>
+    let products = [
+        {//example.json
+            name: "product 1",
+            Price: 99,
+            img:"products/1.webp"
+
+        }
+        //copy past 3 more tmes, change the img for every product
+    ]
+    let cardsGrid = document.querySelector('.cards-grid')
+    products.forEach(function(product){
+        let cardHTML = `
+        <p>placeholder</p>
+        `;
+        cardsGrid.innerHTML = cardsGrid.innerHtMl + cardHTML;
+    
+
+    });
+
+</script>

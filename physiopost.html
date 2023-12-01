@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Corner Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+ 
+     .images {
+    width: 230px;
+    height: 230px;
+    margin: 20px;
+}
+button{
+    margin: 10px;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 200px;
+}
+#icon{
+  color: #000;
+  cursor: pointer;
+}
+#icon.clicked {
+  color: #f00;
+}
+    </style>
+  </head>
+  <body>
+    <header class="flex w-full justify-between">
+      <div class="">
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+      </div>
+      <div class="">
+        <a href="#"><i class="fa-solid fa-lock"></i></a>
+      </div>
+      <div class="">
+        <a href="#"><i class="fa-regular fa-user"></i></a>
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+      </div>
+    </header>
+    <section class="relative" id="cover-image">
+      <img src="pics\firstpic.jpg" alt="" class="w-full h-auto overflow-hidden " >
+      <div class=" top-2/4 flex justify-between absolute w-screen">
+        <button id="button1"> < </button>
+        <button id="button2"> > </button>
+      </div>
+      <div class="flex ml-2/4 flex-col absolute align-center text-center top-2/4 w-screen">
+        <h1 class="text">Stipy Zig Zag Jigsaw Pillow and Duvet Set</h1>
+        <a href="#">view product</a>
+      </div>
+    </section>
+    <section class="m-20">
+      <nav class="flex justify-between m-20">
+        <div><a href="#">store</a></div>
+        <div>
+          <a href="#"><i class="fa-solid fa-sort"></i></a>
+          <a href="#"><i class="fas fa-search"></i></a>
+        </div>
+      </nav>
+      <div id="store-search" class="hidden flex gap-2 right-10 top-10 justify-end">
+        <label for="price-limit">Price Limit:</label>
+        <input type="number" name="price-limit" id="price-limit" />
+        <label for="text-input">Text:</label>
+        <input class="border-black border-1" type="text" id="text-input" />
+        <p id="store-search-close">X</p>
+      </div>
+      <div class="cards-grid flex flex-wrap justify-center items-center gap-5 mt-5">
+        <div class="card shadow-md">
+          <img src="pics\stress ball.jpg" alt="stressball" class="images">
+          <div class="card-details flex justify-between m-5">
+            <h6>Stress Ball</h6>
+            <i class="fa-regular fa-heart" id="icon" onclick="toggleColor(this)"></i>
+          </div>
+          <p class="m-5"><b>$8.50</b></p>
+        </div>
+        <div class="card shadow-md">
+          <img src="pics\finger extensors.jpg" alt="extensors" class="images" >
+          <div class="card-details flex justify-between m-5">
+            <h6>Finger Extensors</h6>
+            <i class="fa-regular fa-heart" id="icon" onclick="toggleColor(this)"></i>
+          </div>
+          <p class="m-5"><b>$10</b></p>
+        </div>
+        <div class="card shadow-md">
+          <img src="pics\noodles bands.jpg" alt="noodles" class="images">
+          <div class="card-details flex justify-between m-5">
+            <h6>Noodles Elastic Bands</h6>
+            <i class="fa-regular fa-heart" id="icon" onclick="toggleColor(this)"></i>
+          </div>
+          <p class="m-5"><b>$20</b></p>
+        </div>
+        <div class="card shadow-md">
+          <img src="pics\busudu ball.jpg" alt="Bosu" class="images">
+          <div class="card-details flex justify-between m-5">
+            <h6>Bosu Ball</h6>
+            <i class="fa-regular fa-heart" id="icon" onclick="toggleColor(this)"></i>
+          </div>
+          <p class="m-5"><b>$60</b></p>
+        </div>
+        <div class="card shadow-md">
+          <img src="pics\ankle weights.jpg" alt="ankleweights" class="images">
+          <div class="card-details flex justify-between m-5">
+            <h6>Ankle Weights</h6>
+            <i class="fa-regular fa-heart" id="icon" onclick="toggleColor(this)"></i>
+          </div>
+          <p class="m-5"><b>$40</b></p>
+        </div>
+        <div class="card shadow-md">
+          <img src="pics\freeman.jpg" alt="freeman" class="images">
+          <div class="card-details flex justify-between m-5">
+            <h6>Freeman Plateau</h6>
+            <i class="fa-regular fa-heart" id="icon" onclick="toggleColor(this)"></i>
+          </div>
+          <p class="m-5"><b>$70</b></p>
+        </div>
+        <div class="card shadow-md">
+        <img src="pics\elasticbands.jpg" alt="elastic" class="images">
+          <div class="card-details flex justify-between m-5">
+            <h6>Elastic Bands</h6>
+            <i class="fa-regular fa-heart" id="icon" onclick="toggleColor(this)"></i>
+          </div>
+          <p class="m-5"><b>$15.50</b></p></div>
+          <div class="card shadow-md">
+            <img src="pics\foam roller.jpg" alt="foamroller" class="images">
+            <div class="card-details flex justify-between m-5">
+              <h6>Foam Roller</h6>
+              <i class="fa-regular fa-heart" id="icon" onclick="toggleColor(this)"></i>
+            </div>
+            <p class="m-5"><b>$15</b></p>
+          </div>
+        </div>
+        <div class="m-25">
+          <h4 class="my-10 font-bold">About</h4>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores corporis suscipit velit est iure laborum, magni, odio consequatur amet, cumque molestiae vero debitis obcaecati recusandae nam nesciunt. Sequi, animi hic.
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores corporis suscipit velit est iure laborum, magni, odio consequatur amet, cumque molestiae vero debitis obcaecati recusandae nam nesciunt. Sequi, animi hic.</p>
+        </div>
+      </section>
+      <hr>
+      <section class="mx-20">
+        <div class="flex justify-between my-5 font-bold">
+          <h6>About</h6>
+          <h6>Social</h6>
+        </div>
+        <div class="flex justify-between my-10">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Corrupti impedit esse tempora! <br> Fugiat eaque tempore, nisi repellendus necessitatibus quam repellat iusto deserunt libero quo <br>ipsa laborum magni vero vel!</p>
+          <p>add social links</p>
+        </div>
+        <script src="script.js"></script>
+      </section>
+
+      <script>
+        let imageSources = ['pics/firstpic.jpg','pics/secondpic.jpg','pics/third.jpg']
+        let script = ['Stipy Zig Zag Jigsaw Pillow and Duvet Set','Real Bambo Wall Clock','Brown and Blue Hardbound Book']
+        let imgIndex = 0;
+        let scriptIndex = 0;
+        updateUI();
+        function moveRight() {
+    // move pointer one step to the right
+    imgIndex = imgIndex + 1;
+    if(imgIndex>imageSources.length - 1){
+        imgIndex= 0;
+    }
+    scriptIndex = scriptIndex + 1;
+    if(scriptIndex>script.length - 1){
+        scriptIndex= 0;
+    }
+    updateUI();
+}
+
+
+function moveLeft() {
+    imgIndex = imgIndex - 1;
+    if(imgIndex<0){
+        imgIndex= imageSources.length - 1;
+    }
+    scriptIndex = scriptIndex - 1;
+    if(scriptIndex<0){
+        scriptIndex= script.length - 1;
+    }
+    
+    updateUI();
+}
+
+function updateUI() {
+    document.querySelector('#cover-image img').src = imageSources[imgIndex];
+    document.querySelector('#cover-image .text').textContent = script[scriptIndex];
+}
+
+let leftBtn = document.querySelector('#button1')
+leftBtn.addEventListener('click', moveLeft )
+
+let rightBtn = document.querySelector('#button2')
+rightBtn.addEventListener('click',  moveRight )
+
+function toggleColor(element) {
+  element.classList.toggle('clicked');
+}
+
+
+      let storeSearch = document.querySelector('#store-search');
+      let searchIcon = document.querySelector('.fa-search');
+      function showSearch() {
+        storeSearch.classList.remove('hidden');
+      }
+      searchIcon.addEventListener('click', showSearch);
+
+      let closeSearchIcon = document.querySelector('#store-search-close');
+      function hideSearch() {
+        storeSearch.classList.add('hidden');
+      }
+      closeSearchIcon.addEventListener('click', hideSearch);
+      function filterStoreItems() {
+        let searchValue = searchInput.value;
+        let maxPrice = priceLimitElement.value;
+        if (isNaN(maxPrice)) {
+          maxPrice = 0;
+        }
+
+        cards.forEach(function (element) {
+          const cardInnerText = element.innerText;
+          const cardInnerTextParts = cardInnerText.split('$');
+          const cardPrice = cardInnerTextParts[1];
+ 
+          if (element.innerText.toLowerCase().includes(searchValue.toLowerCase()) && (0 == maxPrice || cardPrice < maxPrice)) {
+            console.log('entered block to show card', cardPrice, maxPrice);
+            element.classList.remove('hidden');
+          } else {
+            element.classList.add('hidden');
+          }
+        });
+      }
+      const cards = document.querySelectorAll('.card');
+      // store search filtering
+      let searchInput = document.querySelector('#store-search input[type=text]');
+      searchInput.addEventListener('input', filterStoreItems);
+      // get reference of the price limit input
+      const priceLimitElement = document.querySelector('#price-limit');
+      priceLimitElement.addEventListener('change', filterStoreItems);
+
+      </script>
+    </body>
+  </html>
